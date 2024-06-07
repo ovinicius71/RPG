@@ -1,21 +1,21 @@
-# 1 Introdução 
-Este repositório contém o projeto de um jogo de RPG (Role-Playing Game) desenvolvido para a disciplina de Linguagem de Programação Orientada a Objetos (LPOO). O objetivo principal deste projeto é aplicar os conceitos aprendidos durante o curso, como herança, polimorfismo, encapsulamento e uso de design patterns, em um contexto prático.
-## 2 Objetivo 
-O objetivo deste trabalho é implementar em linguagem de programação Java um sistema
-de combates de um jogo de RPG (Role Playing Game). Para isso, deve ser implementado a possibilidade de escolha entre três personagens principais, cada um possuindo armas e habilidades
-únicas.
-### 3 Objetivo de aprendizado
-- Implementar classes e objetos de maneira eficiente.
-- Utilizar herança para criar hierarquias de classes complexas.
-- Aplicar polimorfismo para flexibilizar e expandir o comportamento dos objetos.
-- Encapsular dados e funcionalidades para garantir a integridade e a modularidade do código.
-- Adotar padrões de design para resolver problemas recorrentes no desenvolvimento de software.
+# 1 Introduction
+This repository contains the extension of a role-playing game project (Role-Playing Game) developed for the Object-Oriented Programming Language (LPOO) discipline. The main objective of this project is to apply the concepts learned during the course, such as inheritance, polymorphism, encapsulation and use of design patterns, in a practical context.
+## 2 objective 
+The objective of this work is to implement a system in Java programming language
+of combat in an RPG game (Role Playing Game). To achieve this, the possibility of choosing between three main characters must be implemented, each having weapons and skills.
+unique.
+### 3 Learning Objective
+- Implement classes and objects efficiently.
+- Use inheritance to create complex class hierarchies.
+- Apply polymorphism to make the behavior of objects more flexible and expand.
+- Encapsulate data and functionality to ensure code integrity and modularity.
+- Adopt design patterns to solve recurring problems in software development.
 
-#### 4 Como jogar ?
-- Utilize o git clone para copiar o repositorio
-- No seu terminal acesse a pagina aonde foi clonado o repositorio
-- De o comando javac *.java
-- E por ultimo de o comando java RPG
+#### 4 How to play ?
+- Use git clone to copy the repository
+- On your terminal, access the page where the repository was cloned
+- Give the javac *.java command
+- And lastly, the java RPG command
 
-##### Requisitos
+##### Requirements
 - Java 8
