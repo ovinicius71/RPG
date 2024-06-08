@@ -16,7 +16,8 @@ public class RPG {
         
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite os detalhes do primeiro personagem:");
+        
+        System.out.println("\n******Bem vindo ao RPG The game******\n");
         Personagem personagem1 = criarPersonagem(scanner);
         System.out.println("Digite os detalhes do segundo personagem:");
         Personagem personagem2 = criarPersonagem(scanner);
@@ -49,10 +50,30 @@ public class RPG {
     }
 
     private static Personagem criarPersonagem(Scanner scanner) {
+        System.out.println("escolha sua classe:\n1-Mago\n2-Paladino\n3-Clerigo");
+        System.out.printf("--> ");
         int tipo = scanner.nextInt();
+        System.out.println("quantos pontos de saude desejas (0-10)");
+        System.out.printf("--> ");
         double saude = scanner.nextDouble();
+        System.out.println("quantos pontos de forca desejas (0-10)");
+        System.out.printf("--> ");
         double forca = scanner.nextDouble();
+        System.out.println("quantos pontos de destreza desejas (0-10)");
+        System.out.printf("--> ");
         double destreza = scanner.nextDouble();
+        if (tipo == 1){
+            System.out.println("qual arma desejas:\n1-Transmutacao\n2-Psikappa");
+            System.out.printf("--> ");
+        }
+        else if (tipo == 2){
+            System.out.println("qual arma desejas:\n1-Espada\n2-Lanca");
+            System.out.printf("--> ");
+        }
+        else if (tipo == 3){
+            System.out.println("qual arma desejas:\n1-Martelo\n2-Maca");
+            System.out.printf("--> ");
+        }
         int arma = scanner.nextInt();
 
         switch (tipo) {
