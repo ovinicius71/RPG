@@ -9,24 +9,30 @@ public abstract class Personagem {
     private double forca;
     private double destreza;
     private Arma arma;
+    private double fe;
+    private double magia;
+    private double defesa;
     //construtor
-    public Personagem (String nomeTipo, double saude, double forca, double destreza,Arma arma){
+    public Personagem (String nomeTipo, double saude, double forca, double destreza,Arma arma, double magia, double fe,double defesa){
         this.nomeTipo = nomeTipo;
         this.saude = saude;
         this.forca = forca;
         this.destreza = destreza;
         this.arma = arma;
+        this.fe = fe;
+        this.magia = magia;
+        this.defesa = defesa;
 
     }
 
     public void printStatus(){
         //verifica se o personagem esta morto caso esteja informa que esta morto e logo depos seus status
         if (estaMorto()){
-            System.out.println(nomeTipo + " [Morreu, Forca: " + forca + ", Destreza: " + destreza + ", " + arma.getNome() + "]");
+            System.out.println(nomeTipo + " [Morreu, Forca: " + forca + ", Destreza: " + destreza + ", " + arma.getNome() + ", Magia: "+ magia+", Fe: "+fe+", Defesa: "+defesa+"]");
         }
         //se nao mostra seu nome e seus status
         else{
-            System.out.println(nomeTipo + " [Saude: " + saude + ", Forca: " + forca + ", Destreza: " + destreza + ", " + arma.getNome() + "]");
+             System.out.println(nomeTipo + " [Saude: "+saude+", Forca: " + forca + ", Destreza: " + destreza + ", " + arma.getNome() + ", Magia: "+ magia+", Fe: "+fe+", Defesa: "+defesa+"]");
         }
     }
     public void atacar (Personagem b){
@@ -73,6 +79,30 @@ public abstract class Personagem {
         }
         else {
             return false;
+        }
+    }
+    public void Upgrade(int status){
+        switch (status) {
+            case 1:
+                saude += 1;
+            return;
+            case 2:
+                forca +=1;
+            return;
+            case 3: 
+                destreza +=1;
+            return;
+            case 4:
+                magia +=1;
+            return;
+            case 5:
+                fe +=1;
+            return;
+            case 6:
+                defesa +=1;
+            return;
+            default:
+                throw new AssertionError();
         }
     }
 }
