@@ -1,6 +1,9 @@
 package Personagens;
 
 import Armas.Arma;
+import Itens.Itens;
+import java.util.ArrayList;
+import java.util.List;
 
 //classe personagem
 public abstract class Personagem {
@@ -12,8 +15,10 @@ public abstract class Personagem {
     private double fe;
     private double magia;
     private double defesa;
+    private List<Itens> itens;
+    public int quant_item;
     //construtor
-    public Personagem (String nomeTipo, double saude, double forca, double destreza,Arma arma, double magia, double fe,double defesa){
+    public Personagem (String nomeTipo, double saude, double forca, double destreza,Arma arma, double magia, double fe,double defesa,List<Itens> itens){
         this.nomeTipo = nomeTipo;
         this.saude = saude;
         this.forca = forca;
@@ -22,6 +27,7 @@ public abstract class Personagem {
         this.fe = fe;
         this.magia = magia;
         this.defesa = defesa;
+        this.itens = new ArrayList<>(itens);
 
     }
 
@@ -34,6 +40,11 @@ public abstract class Personagem {
         else{
              System.out.println(nomeTipo + " [Saude: "+saude+", Forca: " + forca + ", Destreza: " + destreza + ", " + arma.getNome() + ", Magia: "+ magia+", Fe: "+fe+", Defesa: "+defesa+"]");
         }
+        System.out.print("Itens: ");
+        for (Itens item : itens) {
+            System.out.print(item.getNomeItem() + " ");
+        }
+        System.out.println();
     }
     public void atacar (Personagem b){
         //verifica se o personagem esta morto caso esteja informa que nao consegue atacar
@@ -85,24 +96,49 @@ public abstract class Personagem {
         switch (status) {
             case 1:
                 saude += 1;
+                System.out.println("Parabens voce acaba de ganhar mais um ponto de vida");
             return;
             case 2:
                 forca +=1;
+                System.out.println("Parabens voce acaba de ganhar mais um ponto de forca");
             return;
             case 3: 
                 destreza +=1;
+                System.out.println("Parabens voce acaba de ganhar mais um ponto de destreza");
             return;
             case 4:
                 magia +=1;
+                System.out.println("Parabens voce acaba de ganhar mais um ponto de magia");
             return;
             case 5:
                 fe +=1;
+                System.out.println("Parabens voce acaba de ganhar mais um ponto de fe");
             return;
             case 6:
                 defesa +=1;
+                System.out.println("Parabens voce acaba de ganhar mais um ponto de defesa");
             return;
             default:
                 throw new AssertionError();
         }
     }
+    public static void Print_status(){
+
+    }
+    public void adicionarItem(Itens item) {
+        itens.add(item);
+    }
+
+    public void removerItem(Itens item) {
+        itens.remove(item);
+    }
+    public void printItens(){
+        System.out.print("Itens: ");
+        for (Itens item : itens) {
+            System.out.print(item.getNomeItem() + "\n");
+        }
+    }
+    
 }
+
+
